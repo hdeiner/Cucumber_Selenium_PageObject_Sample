@@ -13,10 +13,6 @@ public class DewPoint {
         return dewPoint;
     }
 
-    public String getDewPointUnits() {
-        return dewPointUnits;
-    }
-
     public boolean isUsingStandardUnits() {
         return dewPointUnits.equals("F");
     }

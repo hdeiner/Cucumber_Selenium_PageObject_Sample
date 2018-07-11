@@ -13,10 +13,6 @@ public class Temperature {
         return temperature;
     }
 
-    public String getTemperatureUnits() {
-        return temperatureUnits;
-    }
-
     public boolean isUsingStandardUnits() {
         return temperatureUnits.equals("F");
     }

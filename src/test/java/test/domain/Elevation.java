@@ -13,10 +13,6 @@ public class Elevation {
         return elevation;
     }
 
-    public String getElevationUnits() {
-        return elevationUnits;
-    }
-
     public boolean isUsingStandardUnits() {
         return elevationUnits.equals("feet");
     }

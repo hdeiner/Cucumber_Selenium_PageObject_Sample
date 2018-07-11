@@ -12,10 +12,6 @@ public class Altimeter {
         return altimeter;
     }
 
-    public String getAltimeterUnits() {
-        return altimeterUnits;
-    }
-
     public boolean isUsingStandardUnits() {
         return altimeterUnits.equals("in Hg");
     }
