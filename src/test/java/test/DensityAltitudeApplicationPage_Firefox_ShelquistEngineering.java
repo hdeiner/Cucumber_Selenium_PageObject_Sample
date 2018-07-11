@@ -10,7 +10,7 @@ import test.domain.*;
 public class DensityAltitudeApplicationPage_Firefox_ShelquistEngineering implements DensityAltitudeApplicationPage {
     private WebDriver driver = null;
 
-    public void loadPage(String browser, String application) {
+    public void loadPage() {
         System.setProperty("webdriver.gecko.driver", "lib/geckodriver");
         driver = new FirefoxDriver();
         driver.get("https://wahiduddin.net/calc/calc_da.htm");

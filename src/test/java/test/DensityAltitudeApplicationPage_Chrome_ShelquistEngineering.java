@@ -10,7 +10,7 @@ import test.domain.*;
 public class DensityAltitudeApplicationPage_Chrome_ShelquistEngineering implements DensityAltitudeApplicationPage {
     private WebDriver driver = null;
 
-    public void loadPage(String browser, String application) {
+    public void loadPage() {
         System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
         driver = new ChromeDriver();
         driver.get("http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm");

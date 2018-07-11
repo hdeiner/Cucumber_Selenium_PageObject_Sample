@@ -11,7 +11,7 @@ import test.domain.*;
 public class DensityAltitudeApplicationPage_ChromeHeadless_PilotFriend implements DensityAltitudeApplicationPage{
     private WebDriver driver = null;
 
-    public void loadPage(String browser, String application) {
+    public void loadPage() {
         System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
