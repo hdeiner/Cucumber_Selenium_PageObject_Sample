@@ -40,7 +40,6 @@ public class DensityAltitudeApplicationTester {
 
         densityAltitudeApplicationPage.quit();
 
-//        return new Altitude("1000", "feet");
         return densityAltitude;
     }
 }

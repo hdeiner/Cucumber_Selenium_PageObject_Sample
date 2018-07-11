@@ -2,19 +2,22 @@ package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import test.domain.*;
 
-public class DensityAltitudeApplicationPage_Firefox_ShelquistEngineering implements DensityAltitudeApplicationPage {
+public class DensityAltitudeApplicationPage_ChromeHeadless_PilotFriend implements DensityAltitudeApplicationPage{
     WebDriver driver = null;
     String applicationURL = "";
 
     public void loadPage(String browser, String application) {
-        System.setProperty("webdriver.gecko.driver", "lib/geckodriver");
-        driver = new FirefoxDriver();
-        applicationURL = "https://wahiduddin.net/calc/calc_da.htm";
+        System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        driver = new ChromeDriver(options);
+        applicationURL = "http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm";
         driver.get(applicationURL);
     }
 

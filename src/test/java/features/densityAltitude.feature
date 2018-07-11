@@ -17,8 +17,9 @@ Feature: Density Altitude
 
   Scenario Outline: Density altitude checking
     Given I'm using the following browsers
-      | firefox |
-      | chrome  |
+      | firefox        |
+      | chrome         |
+      | chromeHeadless |
     And I'm using the following appplications
       | Pilot Friend             |
       | Shelquist Engineering    |
