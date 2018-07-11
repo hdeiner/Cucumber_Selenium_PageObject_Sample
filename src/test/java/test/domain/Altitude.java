@@ -1,8 +1,8 @@
 package test.domain;
 
 public class Altitude {
-    String altitude;
-    String altitudeUnits;
+    private final String altitude;
+    private final String altitudeUnits;
 
     public Altitude(String altitude, String altitudeUnits) {
         this.altitude = altitude;

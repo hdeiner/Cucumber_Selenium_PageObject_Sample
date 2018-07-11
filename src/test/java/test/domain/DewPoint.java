@@ -1,8 +1,8 @@
 package test.domain;
 
 public class DewPoint {
-    String dewPoint;
-    String dewPointUnits;
+    private final String dewPoint;
+    private final String dewPointUnits;
 
     public DewPoint(String dewPoint, String dewPointUnits) {
         this.dewPoint = dewPoint;

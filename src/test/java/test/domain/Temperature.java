@@ -1,8 +1,8 @@
 package test.domain;
 
 public class Temperature {
-    String temperature;
-    String temperatureUnits;
+    private final String temperature;
+    private final String temperatureUnits;
 
     public Temperature(String temperature, String temperatureUnits) {
         this.temperature = temperature;

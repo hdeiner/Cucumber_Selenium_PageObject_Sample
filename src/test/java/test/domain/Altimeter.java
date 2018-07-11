@@ -1,8 +1,8 @@
 package test.domain;
 
 public class Altimeter {
-    String altimeter;
-    String altimeterUnits;
+    private final String altimeter;
+    private final String altimeterUnits;
 
     public Altimeter(String altimeter, String altimeterUnits) {
         this.altimeter = altimeter;

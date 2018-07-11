@@ -1,7 +1,7 @@
 package test;
 
-public class DensityAltitudeApplicationPageFactory {
-    DensityAltitudeApplicationPage densityAltitudeApplicationPage = null;
+class DensityAltitudeApplicationPageFactory {
+    private DensityAltitudeApplicationPage densityAltitudeApplicationPage = null;
 
     public DensityAltitudeApplicationPageFactory(String browser, String application) {
         if (browser.equals("firefox") && application.equals("Pilot Friend")) {

@@ -31,7 +31,7 @@ public class CucumberRunner {
         System.out.println("Starting net.masterthought.cucumber Report");
 
         File reportOutputDirectory = new File("target/cucumber");
-        List<String> jsonFiles = new ArrayList<String>();
+        List<String> jsonFiles = new ArrayList<>();
         jsonFiles.add("target/cucumber/json-report.json");
 
         String jenkinsBasePath = "";

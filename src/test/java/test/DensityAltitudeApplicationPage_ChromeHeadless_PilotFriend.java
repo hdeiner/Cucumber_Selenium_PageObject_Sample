@@ -9,16 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import test.domain.*;
 
 public class DensityAltitudeApplicationPage_ChromeHeadless_PilotFriend implements DensityAltitudeApplicationPage{
-    WebDriver driver = null;
-    String applicationURL = "";
+    private WebDriver driver = null;
 
     public void loadPage(String browser, String application) {
         System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
-        applicationURL = "http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm";
-        driver.get(applicationURL);
+        driver.get("http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm");
     }
 
     public void setElevation(Elevation elevation) {
@@ -57,7 +55,7 @@ public class DensityAltitudeApplicationPage_ChromeHeadless_PilotFriend implement
         }
     }
 
-    public Altitude getDensityAltitude(String densityAltitudeUnits) throws InterruptedException {
+    public Altitude getDensityAltitude(String densityAltitudeUnits) {
         Altitude densityAltitude = new Altitude("",densityAltitudeUnits);
         driver.findElement(By.name("e_calculate")).click();
 

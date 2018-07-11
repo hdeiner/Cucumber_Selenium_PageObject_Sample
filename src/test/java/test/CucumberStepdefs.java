@@ -2,8 +2,6 @@ package test;
 
 import test.domain.*;
 
-import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -53,8 +51,8 @@ public class CucumberStepdefs {
     }
 
     @Then("^the density altitude should be \"([^\"]*)\" \"([^\"]*)\"$")
-    public void the_density_altitude_should_be(String densityAltitude, String densityAltitudeUnits) throws InterruptedException {
-        System.out.println("");
+    public void the_density_altitude_should_be(String densityAltitude, String densityAltitudeUnits) {
+        System.out.println();
         for (String browser:browsers) {
             for (String application:applications) {
                 DensityAltitudeApplicationTester densityAltitudeApplicationTester = new DensityAltitudeApplicationTester(browser, application, elevation, temperature, altimeter, dewPoint);

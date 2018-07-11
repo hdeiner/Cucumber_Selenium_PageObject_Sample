@@ -2,19 +2,14 @@ package test;
 
 import test.domain.*;
 
-import test.domain.Altimeter;
-import test.domain.DewPoint;
-import test.domain.Elevation;
-import test.domain.Temperature;
+class DensityAltitudeApplicationTester {
 
-public class DensityAltitudeApplicationTester {
-
-    private String browser;
-    private String application;
-    private Elevation elevation;
-    private Temperature temperature;
-    private Altimeter altimeter;
-    private DewPoint dewPoint;
+    private final String browser;
+    private final String application;
+    private final Elevation elevation;
+    private final Temperature temperature;
+    private final Altimeter altimeter;
+    private final DewPoint dewPoint;
 
     public DensityAltitudeApplicationTester (String browser, String application, Elevation elevation, Temperature temperature, Altimeter altimeter, DewPoint dewPoint) {
         this.browser = browser;
@@ -25,7 +20,7 @@ public class DensityAltitudeApplicationTester {
         this.dewPoint = dewPoint;
     }
 
-    public Altitude densityAltitudeResult(String densityAltitudeUnits) throws InterruptedException {
+    public Altitude densityAltitudeResult(String densityAltitudeUnits) {
         DensityAltitudeApplicationPageFactory densityAltitudeApplicationPageFactory = new DensityAltitudeApplicationPageFactory(browser, application);
         DensityAltitudeApplicationPage densityAltitudeApplicationPage = densityAltitudeApplicationPageFactory.getVariant();
 

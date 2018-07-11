@@ -1,8 +1,8 @@
 package test.domain;
 
 public class Elevation {
-    String elevation;
-    String elevationUnits;
+    private final String elevation;
+    private final String elevationUnits;
 
     public Elevation(String elevation, String elevationUnits) {
         this.elevation = elevation;
