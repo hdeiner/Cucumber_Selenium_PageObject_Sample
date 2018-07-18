@@ -21,8 +21,8 @@ Feature: Density Altitude
       | chrome         |
       | chromeHeadless |
     And I'm using the following appplications
-      | Pilot Friend             |
-      | Shelquist Engineering    |
+      | Pilot Friend          |
+      | Shelquist Engineering |
     When the elevation is "<elevation>" "<elevationUnits>"
     And the temperature is "<temperature>" "<temperatureUnits>"
     And the altimeter is "<altimeter>" "<altimeterUnits>"

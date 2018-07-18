@@ -52,7 +52,6 @@ public class CucumberStepdefs {
 
     @Then("^the density altitude should be \"([^\"]*)\" \"([^\"]*)\"$")
     public void the_density_altitude_should_be(String densityAltitude, String densityAltitudeUnits) {
-        System.out.println();
         for (String browser:browsers) {
             for (String application:applications) {
                 DensityAltitudeApplicationTester densityAltitudeApplicationTester = new DensityAltitudeApplicationTester(browser, application, elevation, temperature, altimeter, dewPoint);
