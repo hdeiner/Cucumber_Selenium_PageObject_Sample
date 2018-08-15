@@ -15,6 +15,7 @@ Feature: Density Altitude
 
   There are many online resources that pilots can use to calculate density altitude.  We'd like to test them!
 
+
   Scenario Outline: Density altitude checking
     Given I'm using the following browsers
       | firefox        |

@@ -13,7 +13,7 @@ public class DensityAltitudeApplicationPage_Chrome_ShelquistEngineering implemen
     public void loadPage() {
         System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
         driver = new ChromeDriver();
-        driver.get("http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm");
+        driver.get("https://wahiduddin.net/calc/calc_da.htm");
     }
 
     public void setElevation(Elevation elevation) {

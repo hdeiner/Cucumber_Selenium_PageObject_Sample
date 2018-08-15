@@ -16,7 +16,7 @@ public class DensityAltitudeApplicationPage_ChromeHeadless_ShelquistEngineering 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         driver = new ChromeDriver(options);
-        driver.get("http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm");
+        driver.get("https://wahiduddin.net/calc/calc_da.htm");
     }
 
     public void setElevation(Elevation elevation) {
