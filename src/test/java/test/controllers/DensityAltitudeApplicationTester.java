@@ -1,8 +1,10 @@
-package test;
+package test.controllers;
 
 import test.domain.*;
+import test.pageObjects.DensityAltitudeApplicationPage;
+import test.pageObjects.DensityAltitudeApplicationPageFactory;
 
-class DensityAltitudeApplicationTester {
+public class DensityAltitudeApplicationTester {
 
     private final String browser;
     private final String application;
@@ -11,7 +13,7 @@ class DensityAltitudeApplicationTester {
     private final Altimeter altimeter;
     private final DewPoint dewPoint;
 
-    DensityAltitudeApplicationTester (String browser, String application, Elevation elevation, Temperature temperature, Altimeter altimeter, DewPoint dewPoint) {
+    public DensityAltitudeApplicationTester (String browser, String application, Elevation elevation, Temperature temperature, Altimeter altimeter, DewPoint dewPoint) {
         this.browser = browser;
         this.application = application;
         this.elevation = elevation;
@@ -20,11 +22,11 @@ class DensityAltitudeApplicationTester {
         this.dewPoint = dewPoint;
     }
 
-    Altitude densityAltitudeResult(String densityAltitudeUnits) {
+    public Altitude densityAltitudeResult(String densityAltitudeUnits) {
         DensityAltitudeApplicationPageFactory densityAltitudeApplicationPageFactory = new DensityAltitudeApplicationPageFactory(browser, application);
         DensityAltitudeApplicationPage densityAltitudeApplicationPage = densityAltitudeApplicationPageFactory.getVariant();
 
-        densityAltitudeApplicationPage.loadPage();
+        densityAltitudeApplicationPage.load();
 
         densityAltitudeApplicationPage.setElevation(elevation);
         densityAltitudeApplicationPage.setTemperature(temperature);

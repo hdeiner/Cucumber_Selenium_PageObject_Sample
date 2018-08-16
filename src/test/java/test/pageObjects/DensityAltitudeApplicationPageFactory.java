@@ -1,6 +1,6 @@
-package test;
+package test.pageObjects;
 
-class DensityAltitudeApplicationPageFactory {
+public class DensityAltitudeApplicationPageFactory {
     private DensityAltitudeApplicationPage densityAltitudeApplicationPage = null;
 
     public DensityAltitudeApplicationPageFactory(String browser, String application) {

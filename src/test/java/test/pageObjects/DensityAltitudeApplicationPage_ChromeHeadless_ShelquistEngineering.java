@@ -1,18 +1,21 @@
-package test;
+package test.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import test.domain.*;
 
-public class DensityAltitudeApplicationPage_Chrome_ShelquistEngineering implements DensityAltitudeApplicationPage {
+public class DensityAltitudeApplicationPage_ChromeHeadless_ShelquistEngineering implements DensityAltitudeApplicationPage {
     private WebDriver driver = null;
 
-    public void loadPage() {
+    public void load() {
         System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        driver = new ChromeDriver(options);
         driver.get("https://wahiduddin.net/calc/calc_da.htm");
     }
 

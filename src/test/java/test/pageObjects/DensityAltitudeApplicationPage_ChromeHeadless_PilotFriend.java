@@ -1,18 +1,21 @@
-package test;
+package test.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import test.domain.*;
 
-public class DensityAltitudeApplicationPage_Firefox_PilotFriend implements DensityAltitudeApplicationPage {
+public class DensityAltitudeApplicationPage_ChromeHeadless_PilotFriend implements DensityAltitudeApplicationPage {
     private WebDriver driver = null;
 
-    public void loadPage() {
-        System.setProperty("webdriver.gecko.driver", "lib/geckodriver");
-        driver = new FirefoxDriver();
+    public void load() {
+        System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        driver = new ChromeDriver(options);
         driver.get("http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm");
     }
 

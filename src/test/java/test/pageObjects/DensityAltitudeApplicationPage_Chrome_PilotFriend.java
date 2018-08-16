@@ -1,4 +1,4 @@
-package test;
+package test.pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import test.domain.*;
 public class DensityAltitudeApplicationPage_Chrome_PilotFriend implements DensityAltitudeApplicationPage {
     private WebDriver driver = null;
 
-    public void loadPage() {
+    public void load() {
         System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
         driver = new ChromeDriver();
         driver.get("http://www.pilotfriend.com/flightplanning/flight%20planning/calculators/density_altitude_calc.htm");

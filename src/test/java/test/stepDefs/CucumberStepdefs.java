@@ -1,5 +1,6 @@
-package test;
+package test.stepDefs;
 
+import test.controllers.DensityAltitudeApplicationTester;
 import test.domain.*;
 
 import cucumber.api.java.en.Given;
